@@ -1,0 +1,175 @@
+:root {
+    --box_shadow_color: rgba(18, 120, 134, 0.75);
+}
+
+
+#reward-ads, #home-banner-horizontal, #news-area {
+    display: none !important;
+}
+
+
+.attention {
+    animation: none !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 0 !important;
+}
+
+
+#logo, #menu-items, #menu-items-old {
+    box-shadow: 0 0 5px 5px var(--box_shadow_color) !important;
+}
+
+#play-section {
+    background: #16232a !important;
+    width: max-content !important;
+    padding: 16px !important;
+    border-radius: 7px 7px 0 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    position: absolute !important;
+    bottom: 10% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    height: min-content !important;
+    box-shadow:
+            -5px 0 5px var(--box_shadow_color),   /* Left */
+            5px 0 5px var(--box_shadow_color),   /* Right */
+            0 -5px 5px var(--box_shadow_color) !important; /* Top */
+
+}
+
+#game-info {
+    box-shadow:
+            -5px 0 5px var(--box_shadow_color),   /* Left */
+            5px 0 5px var(--box_shadow_color),   /* Right */
+            0 -5px 5px var(--box_shadow_color) !important; /* Top */
+}
+
+#menu-bar {
+    position: absolute !important;
+    top: 3% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 95% !important;
+    border-bottom: none !important;
+    background: none !important;
+    /*background: #16232a !important;*/
+    border-radius: 7px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 50px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px !important;
+}
+
+#logo {
+    display: flex !important;
+    flex: none !important;
+    flex-direction:  row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    background: #16232a !important;
+    border-radius: 7px !important;
+    padding: 10px !important;
+}
+
+#menu-items-old {
+    flex: none !important;
+    display: flex !important;
+    flex-direction:  row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    background: #16232a !important;
+    border-radius: 7px !important;
+    max-width: min-content !important;
+}
+
+#menu-items {
+    right: 173px !important; /* adjust according to your display ratio */
+    display: flex !important;
+    flex-direction:  row !important;
+    flex: none !important;
+    gap: 0 !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    background: #16232a !important;
+    border-radius: 7px !important;
+}
+
+/*#menu-items {*/
+/*    justify-content: center !important;*/
+/*}*/
+
+#menu-items > li {
+    border: none !important;
+    width: min-content !important;
+}
+
+#menu-items li.active {
+    background-color: darkslategray !important;
+}
+
+#game-info {
+    border-radius: 0 0 7px 7px !important;
+    background: #16232a !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+}
+
+.options {
+    border-top: none !important;
+}
+
+.options a:not(:last-child) {
+    border-right: none !important;
+}
+
+.game-options {
+    border-bottom: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    margin-bottom: 0 !important;
+}
+
+#loadout-selection-button, #map-selection-button {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: inherit !important;
+    padding: 5px !important;
+    justify-content: space-between !important;
+    border: solid 2px black !important;
+    border-radius: 7px !important;
+    width: 100% !important;
+}
+
+#map-selection-button {
+    width: 90% !important;
+}
+
+
+.big-button, .invite-button {
+    padding: 7px !important;
+    background: darkslategrey !important;
+    border-left: none !important;
+}
+
+.big-button {
+    letter-spacing: 2px !important;
+    font-size: 3em !important;
+    padding: 10px !important;
+}
+
+.big-button > span > i {
+    display: none !important;
+}
+
+.invite-button > i {
+    display: none !important;
+}
+
