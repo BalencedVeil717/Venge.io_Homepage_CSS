@@ -1,27 +1,35 @@
-:root {
-    --box_shadow_color: rgba(18, 120, 134, 0.75);
+#menu{
+    background: url("https://i.postimg.cc/MGTtFLtH/6Xc8.gif") no-repeat center !important;
+    background-size: cover !important;
 }
-
+:root {
+    --glass-bg: rgba(40, 60, 70, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-highlight: rgba(120, 180, 200, 0.3);
+    --text-glow: rgba(200, 240, 255, 0.6);
+}
 
 #reward-ads, #home-banner-horizontal, #news-area {
     display: none !important;
 }
 
-
 .attention {
     animation: none !important;
-    animation-name: none !important;
-    animation-duration: 0s !important;
-    animation-iteration-count: 0 !important;
 }
 
-
-#logo, #menu-items, #menu-items-old {
-    box-shadow: 0 0 5px 5px var(--box_shadow_color) !important;
+/* Glass panel styling */
+#logo, #menu-items, #menu-items-old,
+#play-section, #game-info {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
 #play-section {
-    background: #16232a !important;
     width: max-content !important;
     padding: 16px !important;
     border-radius: 7px 7px 0 0 !important;
@@ -33,18 +41,6 @@
     left: 50% !important;
     transform: translateX(-50%) !important;
     height: min-content !important;
-    box-shadow:
-            -5px 0 5px var(--box_shadow_color),   /* Left */
-            5px 0 5px var(--box_shadow_color),   /* Right */
-            0 -5px 5px var(--box_shadow_color) !important; /* Top */
-
-}
-
-#game-info {
-    box-shadow:
-            -5px 0 5px var(--box_shadow_color),   /* Left */
-            5px 0 5px var(--box_shadow_color),   /* Right */
-            0 -5px 5px var(--box_shadow_color) !important; /* Top */
 }
 
 #menu-bar {
@@ -53,9 +49,8 @@
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 95% !important;
-    border-bottom: none !important;
-    background: none !important;
-    /*background: #16232a !important;*/
+    border: none !important;
+    background: transparent !important;
     border-radius: 7px !important;
     display: flex !important;
     flex-direction: row !important;
@@ -68,10 +63,9 @@
 #logo {
     display: flex !important;
     flex: none !important;
-    flex-direction:  row !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: space-around !important;
-    background: #16232a !important;
     border-radius: 7px !important;
     padding: 10px !important;
 }
@@ -79,29 +73,23 @@
 #menu-items-old {
     flex: none !important;
     display: flex !important;
-    flex-direction:  row !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: space-around !important;
-    background: #16232a !important;
     border-radius: 7px !important;
     max-width: min-content !important;
 }
 
 #menu-items {
-    right: 173px !important; /* adjust according to your display ratio */
+    right: 173px !important;
     display: flex !important;
-    flex-direction:  row !important;
+    flex-direction: row !important;
     flex: none !important;
     gap: 0 !important;
     align-items: center !important;
     justify-content: space-around !important;
-    background: #16232a !important;
     border-radius: 7px !important;
 }
-
-/*#menu-items {*/
-/*    justify-content: center !important;*/
-/*}*/
 
 #menu-items > li {
     border: none !important;
@@ -109,67 +97,62 @@
 }
 
 #menu-items li.active {
-    background-color: darkslategray !important;
+    background-color: var(--glass-highlight) !important;
 }
 
 #game-info {
     border-radius: 0 0 7px 7px !important;
-    background: #16232a !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-around !important;
 }
 
-.options {
-    border-top: none !important;
-}
-
-.options a:not(:last-child) {
-    border-right: none !important;
-}
-
-.game-options {
-    border-bottom: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-around !important;
-    margin-bottom: 0 !important;
-}
-
+/* Fully transparent buttons */
+.big-button, .invite-button,
 #loadout-selection-button, #map-selection-button {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: inherit !important;
-    padding: 5px !important;
-    justify-content: space-between !important;
-    border: solid 2px black !important;
-    border-radius: 7px !important;
-    width: 100% !important;
-}
-
-#map-selection-button {
-    width: 90% !important;
-}
-
-
-.big-button, .invite-button {
-    padding: 7px !important;
-    background: darkslategrey !important;
-    border-left: none !important;
+    background: rgba(50, 80, 90, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: white !important;
+    text-shadow: 0 0 5px var(--text-glow) !important;
+    transition: all 0.3s ease !important;
 }
 
 .big-button {
-    letter-spacing: 2px !important;
+    padding: 15px 30px !important;
     font-size: 3em !important;
-    padding: 10px !important;
+    letter-spacing: 2px !important;
+    border-radius: 8px !important;
 }
 
-.big-button > span > i {
+.invite-button {
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+}
+
+#loadout-selection-button, #map-selection-button {
+    padding: 8px !important;
+    border-radius: 6px !important;
+}
+
+/* Hover effects */
+.big-button:hover, .invite-button:hover,
+#loadout-selection-button:hover, #map-selection-button:hover {
+    background: rgba(60, 100, 120, 0.3) !important;
+    box-shadow:
+            0 0 15px var(--glass-highlight),
+            inset 0 0 10px rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-1px) !important;
+}
+
+.big-button > span > i, .invite-button > i {
     display: none !important;
 }
 
-.invite-button > i {
-    display: none !important;
+/* Remove all box shadows */
+#logo, #menu-items, #menu-items-old,
+#play-section, #game-info {
+    box-shadow: none !important;
 }
-
