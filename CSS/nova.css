@@ -1,7 +1,8 @@
-#menu{
-    background: url("https://i.postimg.cc/MGTtFLtH/6Xc8.gif") no-repeat center !important;
+#menu {
+    background: url("https://i.postimg.cc/mrNHcTWT/giphy.gif") no-repeat center !important;
     background-size: cover !important;
 }
+
 :root {
     --glass-bg: rgba(40, 60, 70, 0.25);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -24,9 +25,8 @@
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid var(--glass-border) !important;
-    box-shadow:
-            0 4px 15px rgba(0, 0, 0, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
 #play-section {
@@ -132,18 +132,41 @@
     border-radius: 6px !important;
 }
 
+.game-options {
+    border-bottom: none !important;
+    display: flex !important;
+    flex-direction: row;
+    gap: 0 !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
 #loadout-selection-button, #map-selection-button {
     padding: 8px !important;
     border-radius: 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    justify-content: space-evenly !important;
+    height: min-content !important;
 }
+
+#loadout-selection-button > span, #map-selection-button > span {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
 
 /* Hover effects */
 .big-button:hover, .invite-button:hover,
 #loadout-selection-button:hover, #map-selection-button:hover {
     background: rgba(60, 100, 120, 0.3) !important;
-    box-shadow:
-            0 0 15px var(--glass-highlight),
-            inset 0 0 10px rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 0 15px var(--glass-highlight),
+    inset 0 0 10px rgba(255, 255, 255, 0.1) !important;
     transform: translateY(-1px) !important;
 }
 
@@ -156,3 +179,4 @@
 #play-section, #game-info {
     box-shadow: none !important;
 }
+
